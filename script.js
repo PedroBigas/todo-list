@@ -1,5 +1,7 @@
-const tarefas = document.getElementById("tarefas");
-const tarefaInp = document.getElementById("tarefaInp");
+const input = document.getElementById("input");
+let tarefas = [];
+
+let tarefas = JSON.parse(localStorage.getItem("salvar")) || []
 
 function addTarefa() {
     lista = document.createElement("li");
