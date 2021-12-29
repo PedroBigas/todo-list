@@ -1,17 +1,18 @@
 const input = document.getElementById("input");
-let tarefas = [];
+const listaPai = document.getElementById("tarefas");
 
 let tarefas = JSON.parse(localStorage.getItem("salvar")) || []
 
 function addTarefa() {
     lista = document.createElement("li");
-    var texto = document.createTextNode("vai po");
-    lista.appendChild(texto);
 
-    var lista0 = document.getElementsByTagName('ul')[0];
+    const valor = input.value;
 
-    var itens = document.getElementsByTagName('li');
+    var texto = document.createTextNode(valor);
 
-    lista0.insertBefore(lista, itens[0]);
+
+    lista.appendChild(texto)
+    listaPai.appendChild(lista)
+    
 }
 
