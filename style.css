@@ -20,9 +20,15 @@ body{
     border-radius: 10px;
     background: #7900FF;
     box-shadow: 1px 1px 5px white;
+    text-align: center;
 }
 .top-title{
     padding-bottom: 10px;
+}
+#input {
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
 }
 ion-icon{
     cursor: pointer;
@@ -30,4 +36,16 @@ ion-icon{
 .todo-list{
     margin-top: 20px;
     padding: 20px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+ul{
+    list-style: none;
+}
+
+
+li ion-icon{
+
+    margin-left: 10px;
 }
