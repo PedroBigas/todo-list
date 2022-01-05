@@ -1,18 +1,55 @@
-const input = document.getElementById("input");
-const listaPai = document.getElementById("tarefas");
+const ulList = document.getElementById("tarefas");
+const inputElement = document.getElementById("input");
+let tarefas = JSON.parse(localStorage.getItem("salvar")) || [];
 
-let tarefas = JSON.parse(localStorage.getItem("salvar")) || []
+    function addTarefa() {
 
-function addTarefa() {
-    lista = document.createElement("li");
+        var inputValue = inputElement.value;
 
-    const valor = input.value;
+        if (inputElement.value == "") 
 
-    var texto = document.createTextNode(valor);
+        {
+            alert("Escreva uma tarefa primeiro! :D");
+        } 
+        else {
 
+            tarefas.push(inputValue);
 
-    lista.appendChild(texto)
-    listaPai.appendChild(lista)
-    
+            inputElement.value = "";
+            listTask();
+            salvar();
+
+        }
+
 }
 
+    function listTask() {
+
+
+
+}
+
+    function salvar() {
+
+        localStorage.setItem("salvar", JSON.stringify(tarefas));
+
+
+}
+
+    function teste() {
+
+    console.log(inputElement.value);
+
+}
+
+    function limpar() {
+        console.log("ta removendo ta?");
+        tarefas = [];
+        localStorage.clear();
+    }
+
+    addEventListener('keypress',e=>{
+
+        if(e.key=="Enter") addTarefa()
+
+})

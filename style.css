@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: black;
+    background: rgb(0, 0, 0);
 }
 #container{
     box-sizing: border-box;

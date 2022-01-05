@@ -12,8 +12,9 @@
         <div class="card">
             <div class="card-top">
                 <h2 class="top-title">Adicione sua Tarefa</h2>
-                <input type="text" id="input" placeholder="Escreva sua tarefa aqui! :)">
+                <input type="text" id="input" placeholder="Escreva sua tarefa aqui! :)" onchange="teste(this)">
                 <ion-icon name="add-circle-outline" onclick="addTarefa()"></ion-icon>
+                <ion-icon name="close-circle-outline" onclick="limpar()"></ion-icon>
             </div>
             <div class="todo-list">
 
